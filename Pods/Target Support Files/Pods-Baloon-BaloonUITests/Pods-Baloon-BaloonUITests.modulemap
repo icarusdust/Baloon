@@ -1,0 +1,6 @@
+framework module Pods_Baloon_BaloonUITests {
+  umbrella header "Pods-Baloon-BaloonUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
