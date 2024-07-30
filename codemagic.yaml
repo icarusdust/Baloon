@@ -4,11 +4,14 @@ workflows:
       instance_type: mac_mini_m2
       scripts:
           - name: iOS test
-            script: | 
+            script: |
+             xcrun simctl shutdown all
+             TEST_DEVICE=$(xcrun simctl create test-device com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.iOS-15-0)
+             xcrun simctl boot 
               xcode-project run-tests \
                 --workspace Baloon.xcworkspace \
                 --scheme Baloon \
-                --device "iPhone 14"
+                --device $TEST_DEVICE
             test_report: build/ios/test/*.xml
                
       #   - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
