@@ -8,7 +8,7 @@ workflows:
               xcode-project run-tests \
                 --workspace Baloon.xcworkspace \
                 --scheme Baloon \
-                --device "iPhone 11"
+                --device "iPhone 14"
             test_report: build/ios/test/*.xml
                
       #   - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
