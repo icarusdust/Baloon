@@ -1,5 +1,6 @@
 workflows:
     ios-workflow:
+    instance_type: mac_mini_m2
       name: iOS Workflow
       # environment:
       #   groups:
