@@ -34,7 +34,7 @@ workflows:
               xcode-project run-tests \
                 --workspace Baloon.xcworkspace \
                 --scheme Baloon 
-          test_report: build/ios/test/*.xml
+            test_report: build/ios/test/*.xml
                
       #   - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
       #     script: |
